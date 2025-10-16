@@ -2,6 +2,12 @@
 
 This is a repository for my summative assessment - a submission reminder application that alerts students about upcoming assignment deadlines.
 
+## Files Included
+
+- `create_environment.sh` - Sets up the complete application environment
+- `copilot_shell_script.sh` - Updates assignment names and reruns the application
+- `README.md` - This instruction file
+
 ## How to Run the Application
 
 ### Prerequisites
@@ -12,12 +18,11 @@ This is a repository for my summative assessment - a submission reminder applica
 
 1. **Create the Environment**
    ```bash
-   ./create_environment.sh
+   bash create_environment.sh
    ```
-   - This will prompt you for your name
-   - Creates a directory named `submission_reminder_{yourName}`
+   - Prompts for your name
+   - Creates directory `submission_reminder_{yourName}`
    - Sets up all necessary files and directories
-   - Makes all shell scripts executable
 
 2. **Navigate to Your App Directory**
    ```bash
@@ -26,33 +31,27 @@ This is a repository for my summative assessment - a submission reminder applica
 
 3. **Run the Application**
    ```bash
-   ./startup.sh
+   bash startup.sh
    ```
-   - This starts the submission reminder application
    - Shows current assignment and days remaining
    - Lists students who haven't submitted
 
 4. **Change Assignment (Optional)**
    ```bash
-   ./copilot_shell_script.sh
+   bash copilot_shell_script.sh
    ```
-   - Prompts for a new assignment name
-   - Updates the configuration
-   - Automatically reruns the application with new settings
+   - Prompts for new assignment name
+   - Updates configuration and reruns application
 
-## File Structure
-```
-submission_reminder_{yourName}/
-├── app/
-│   └── reminder.sh          # Main reminder logic
-├── assets/
-│   └── submissions.txt      # Student submission data
-├── config/
-│   └── config.env          # Configuration settings
-├── modules/
-│   └── functions.sh        # Helper functions
-└── startup.sh              # Application entry point
-```
+## Application Features
 
-## Testing
-The application includes sample data for 16 students with various submission statuses across different assignments (Shell Navigation, Git, Shell Basics, Shell Permissions).
+- Tracks student submission status for multiple assignments
+- Configurable assignment names and deadlines
+- Automated directory structure creation
+- Cross-platform compatibility (Windows/Linux)
+
+## Git Workflow
+
+This project uses a feature branch workflow:
+- `feature/setup` - Development and rough work
+- `main` - Final clean submission files only
