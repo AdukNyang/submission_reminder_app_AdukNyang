@@ -6,9 +6,6 @@ if [ ! -f "config/config.env" ]; then
     exit 1
 fi
 
-# Make all .sh files executable
-find . -name "*.sh" -type f -exec chmod +x {} \;
-
 echo "Starting Submission Reminder Application..."
 echo "=========================================="
 
